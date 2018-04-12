@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ControlService } from './control.service';  
 import { AppComponent } from './app.component';
@@ -10,6 +11,8 @@ import { ButtonGroupComponent } from './button-group/button-group.component';
 
 import { AlertModule } from 'ngx-bootstrap';
 
+import { StringToArrayPipe } from './custompipe.pipe';
+
 
 @NgModule({
   declarations: [
@@ -17,10 +20,12 @@ import { AlertModule } from 'ngx-bootstrap';
     ContainerComponent,
     WorkspaceComponent,
     ResultComponent,
-    ButtonGroupComponent
+    ButtonGroupComponent,
+    StringToArrayPipe
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AlertModule.forRoot()
   ],
   providers: [ControlService],

@@ -7,9 +7,10 @@ import { ControlService } from '../control.service';
 })
 export class ContainerComponent implements OnInit {
 
-  constructor(public myService: ControlService) { }
-
-  ngOnInit() {
+  constructor(public controlService: ControlService) {  
+    
   }
+
+  ngOnInit() { }
 
 }
