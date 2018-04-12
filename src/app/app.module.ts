@@ -1,18 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
+import { ControlService } from './control.service';  
 import { AppComponent } from './app.component';
+import { ContainerComponent } from './container/container.component';
+import { WorkspaceComponent } from './workspace/workspace.component';
+import { ResultComponent } from './result/result.component';
+import { ButtonGroupComponent } from './button-group/button-group.component';
+
+import { AlertModule } from 'ngx-bootstrap';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContainerComponent,
+    WorkspaceComponent,
+    ResultComponent,
+    ButtonGroupComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AlertModule.forRoot()
   ],
-  providers: [],
+  providers: [ControlService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
