@@ -1,0 +1,14 @@
+.question{
+  font-size: 1.2rem;
+  margin: 8px;
+}
+
+.answer{
+  margin: 8px;
+}
+
+.submit {
+  height: 50px;
+  text-align: right;
+}
+

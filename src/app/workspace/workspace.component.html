@@ -1,22 +1,20 @@
-<div>
-  <ul *ngFor="let problem of controlService.problems">
+<div class="problem">
+  <ul *ngFor="let problem of controlService.problems.problems">
       <li>
         <div class="question">
-          <span>{{problem.id}}</span>
-           <p>{{problem.problem_text}}</p>
+           <p>{{problem.id}}. {{problem.problem_text}}</p>
         </div>
 
         <div class="answer">
           <ul>
-            <li *ngFor="let choice of problem.choices|stringToArray">
-              {{choice}}
+            <li *ngFor="let choice of problem.choices|stringToArray let i=index">
+              <input type="radio" name={{problem.id}} (click)="controlService.selected(i, choice, problem.id)">{{choice}}
             </li>
           </ul>
           <textarea *ngIf="!problem.choices"></textarea>
         </div>
-        
-      
       </li>
   </ul>
-
 </div>
+
+

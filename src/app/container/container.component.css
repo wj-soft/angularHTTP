@@ -1,0 +1,18 @@
+.wrap {
+  width: 1024px;
+  margin: 0 auto;
+  height: 500px;
+  overflow: scroll;  
+  background: red;
+}
+
+.workspace {
+  background: blue;
+  width: calc(1024px - 150px);
+  
+}
+
+.result{
+  width: 150px;
+  float: right;
+}

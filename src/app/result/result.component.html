@@ -1,3 +1,8 @@
-<p>
-  result works!
-</p>
+<div>
+  <ul *ngFor="let answer of controlService.choose">
+    <li>
+      {{answer.no}} : {{answer.select}}
+    </li>
+  </ul>
+
+</div>

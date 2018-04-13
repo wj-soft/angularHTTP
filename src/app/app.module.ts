@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { ControlService } from './control.service';  
 import { AppComponent } from './app.component';
@@ -25,6 +26,7 @@ import { StringToArrayPipe } from './custompipe.pipe';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     AlertModule.forRoot()
   ],
